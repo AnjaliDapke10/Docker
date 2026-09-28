@@ -1,0 +1,15 @@
+services:
+  webserver:
+    image : anjalidapke/docker-practice:httpd-webserver
+    ports:
+      - 81:80
+    volumes: 
+      - /opt /var/www/html
+    environment:
+      department:devops
+
+  nginx-server:
+    image: anjalidapke/docker-practice:nginx-webserver
+    ports:
+      - 82:80
+      
